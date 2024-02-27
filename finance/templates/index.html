@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Symbol</th>
+                <th scope="col">Shares Owned</th>
+                <th scope="col">Current Price</th>
+                <th scope="col">Total Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for stock in portfolio %}
+                {% for quote in quotes %}
+                    {% if quote["symbol"] == stock["symbol"] %}
+                        <tr>
+                            <td>{{ stock["symbol"] }}</td>
+                            <td>{{ stock["SUM(shares)"] }}</td>
+                            <td>{{ quote["price"] | usd }}</td>
+                            <td>{{ stock["total_value"] | usd }}</td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        </tbody>
+    </table>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Cash Balance</th>
+                <th scope="col">Grand Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ balance | usd }}</td>
+                <td>{{ grand_total | usd }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

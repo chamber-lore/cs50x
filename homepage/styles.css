@@ -1,0 +1,67 @@
+body {
+    background-color: grey;
+}
+
+div {
+    padding: 1rem;
+}
+
+.h1 {
+    padding: 1rem 1rem 0 1rem;
+    text-decoration: underline;
+}
+
+.h3 {
+    padding: 1rem 1rem 0 3rem;
+}
+
+a {
+    color: darkgreen;
+}
+
+a:hover {
+    color: red;
+}
+
+a:visited {
+    color: purple;
+}
+
+ul, ol {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+ul > li {
+    list-style-type: square;
+}
+
+ol > li {
+    list-style-type: upper-roman;
+}
+
+img {
+    max-height: 400px;
+    max-width: 400px;
+}
+
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    justify-content: center;
+}
+
+.hovertext {
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+blockquote {
+    padding: 0.5rem;
+    background-color: darkgrey;
+}

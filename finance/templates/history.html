@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Type of Transaction</th>
+                <th scope="col">Stock</th>
+                <th scope="col">(Then-)Price</th>
+                <th scope="col">Number of Shares</th>
+                <th scope="col">Overall Value</th>
+                <th scope="col">Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transaction in transactions %}
+                <tr>
+                    <td>{{ transaction["type"] }}</td>
+                    <td>{{ transaction["symbol"] }}</td>
+                    <td>{{ transaction["price"] | usd }}</td>
+                    <td>{{ transaction["shares"] }}</td>
+                    <td>{{ transaction["overall_value"] | usd }}</td>
+                    <td>{{ transaction["datetime"] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </table>
+{% endblock %}

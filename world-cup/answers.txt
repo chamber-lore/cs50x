@@ -1,0 +1,15 @@
+Times:
+
+10 simulations: 0m0.025s (record time using 0m0.000s format)
+100 simulations: 0m0.027s (record time using 0m0.000s format)
+1000 simulations: 0m0.034s (record time using 0m0.000s format)
+10000 simulations: 0m0.098s (record time using 0m0.000s format)
+100000 simulations: 0m0.771s (record time using 0m0.000s format)
+1000000 simulations: 0m7.834s (record time using 0m0.000s format)
+
+Questions:
+
+Which predictions, if any, proved incorrect as you increased the number of simulations?: With respect to running time, the small N values hardly differed at all. I think this is of O(nlog(n)), but regardless, I didn't expect such a minimal (almost insignificant) difference over as large a jump as 10 to 1000.
+
+Suppose you're charged a fee for each second of compute time your program uses.
+After how many simulations would you call the predictions "good enough"?: It would depend on the way the fee were determined. But after 10,000 iterations or so, the running time begins to get away from you, without (I feel) difference in the results enough to justify the expenditure.

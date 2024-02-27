@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>The Chamber of Lore: Codex</title>
+    </head>
+    <body>
+        <script>
+            window.addEventListener("DOMContentLoaded", function() {
+                let list_items = document.querySelectorAll("li");
+                let list_items_length = list_items.length;
+                for (let i = 0; i < list_items_length; i++)
+                {
+                    list_items[i].classList.add("text-dark");
+                    list_items[i].addEventListener("mouseover", function() {
+                        list_items[i].classList.add("active");
+                    });
+                    list_items[i].addEventListener("mouseout", function() {
+                        list_items[i].classList.remove("active");
+                    })
+                }
+            })
+        </script>
+        <header class="container-fluid">
+            <h1 class="h1">Welcome to codex!</h1>
+        </header>
+        <div class="container-fluid">
+            <h3 class="h3">
+                What I'm Working On
+            </h3>
+                <ul class="list-group">
+                    <li class="list-group-item">Harvard's
+                        <a href="https://cs50.harvard.edu/x/2023/">CS50x</a>
+                    </li>
+                    <li class="list-group-item">Setting up my
+                        <a href="https://github.com/chamber-lore">Github</a>
+                            and
+                            <a href="https://www.linkedin.com/in/lorenzo-chamberlin-2aa553282/">LinkedIn</a>
+                    </li>
+                    <li class="list-group-item">Writing my novel</li>
+                    <li class="list-group-item">Taking care of the fam</li>
+                    <li class="list-group-item">Being a good boyfriend!</li>
+                </ul>
+            <h3 class="h3">
+                What's Getting Me Through
+            </h3>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-secondary">Books:<ol class="list-group">
+                        <li class="list-group-item">The Righteous Mind</li>
+                        <li class="list-group-item">The Body Keeps the Score</li>
+                        <li class="list-group-item">Dao de Jing</li>
+                    </ol></li>
+                    <li class="list-group-item list-group-item-secondary">Songs:<ol class="list-group">
+                        <li class="list-group-item">The Kinks - All Day and All of the Night</li>
+                        <li class="list-group-item">Derek and the Dominos - Layla</li>
+                        <li class="list-group-item">Bruce Springsteen - Thunder Road</li>
+                    </ol></li>
+                    <li class="list-group-item list-group-item-secondary">Films:<ol class="list-group">
+                        <li class="list-group-item">Mandy</li>
+                        <li class="list-group-item">Primer</li>
+                        <li class="list-group-item">Suspiria</li>
+                    </ol></li>
+                </ul>
+            <h3 class="h3">
+                Stuff to Check Out
+            </h3>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <a href="https://aeon.co/">Aeon</a>
+                    -- digital-first philosophy publication
+                </li>
+                <li class="list-group-item">
+                    <a href="https://www.clearerthinking.org/">Clearer Thinking</a>
+                    -- tools for introspection and mindhacking
+                </li>
+                <li class="list-group-item">
+                    <a href="https://rachelbythebay.com">Rachel By the Bay</a>
+                    -- super nerdy, insightful tech blog
+                </li>
+                <li class="list-group-item">
+                    <a href="https://www.memeorandum.com/">Memeorandum</a>
+                    -- AI-generated daily newsfeed
+                </li>
+            </ul>
+        </div>
+        <footer class="container-fluid">
+            Navigate back to the
+             <a href="index.html">index</a>
+        </footer>
+    </body>
+</html>

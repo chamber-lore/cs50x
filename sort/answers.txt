@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: it's much faster if the data is sorted
+
+sort2 uses: merge sort
+
+How do you know?: it's by far the fastest in every case
+
+sort3 uses: selection sort
+
+How do you know?: it's equally slow regardless of whether the data is sorted or not

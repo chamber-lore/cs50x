@@ -1,0 +1,9 @@
+-- Keep a log of any SQL queries you execute as you solve the mystery.
+
+SELECT description, day, month, year FROM crime_scene_reports WHERE description LIKE '%CS50 duck%'; -- Get the witnesses to the crime and the date of their statements
+SELECT transcript FROM interviews WHERE transcript LIKE '%bakery%' AND day = 28 AND month = 7 AND year = 2021; -- Get statements for the three witnesses to the crime
+SELECT duration FROM phone_calls ORDER BY duration LIMIT 1; -- Determine how duration is measured (in seconds)
+SELECT DISTINCT(activity) FROM bakery_security_logs; -- Determine what leaving is called (exit)
+SELECT name FROM people WHERE license_plate IN (SELECT caller FROM phone_calls WHERE duration < 60 AND day = 28 AND month = 7 AND year = 2021) AND id in (SELECT person_id FROM bank_accounts JOIN atm_transactions ON atm_transactions.account+number = bank_accounts.account_number WHERE atm_transactions.day = 28 AND atm_transactions.month = 7 AND atm_transactions.year = 2021 AND atm_transactions.atm_location = 'Leggett Street' AND atm_transactions.transaction_type LIKE 'withdra%') AND passport_number IN (SELECT passport_number FROM passengers WHERE flight_id = (SELECT id FROM flights WHERE day = 29 AND month = 7 AND year = 2021 ORDER BY hour, minute LIMIT 1)); -- Get thief
+SELECT city FROM airports JOIN flights ON flights.destination_airport_id = airports.id WHERE flights.id = (SELECT id FROM flights WHERE day = 29 AND month = 7 AND year = 2021 ORDER BY hour, minute LIMIT 1); -- Get city of refuge
+SELECT name FROM people WHERE phone_number = (SELECT receiver FROM phone_calls WHERE duration < 60 AND day = 28 AND month = 7 AND year = 2021 AND caller = (SELECT phone_number FROM people WHERE name = 'Bruce')); -- Get accomplice
